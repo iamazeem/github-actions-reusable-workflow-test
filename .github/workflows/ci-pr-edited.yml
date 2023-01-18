@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  set-env-vars:
-  uses: ./.github/workflows/ci.yml
-  with:
-    message: 'PR edited'
+  pr-edited:
+    uses: ./.github/workflows/ci.yml
+    with:
+      message: 'PR edited'

@@ -11,7 +11,7 @@ on:
       - '**.md'
 
 jobs:
-  set-env-vars:
-  uses: ./.github/workflows/ci.yml
-  with:
-    message: 'PR opened/synchroized'
+  pr-open-sync:
+    uses: ./.github/workflows/ci.yml
+    with:
+      message: 'PR opened/synchroized'
