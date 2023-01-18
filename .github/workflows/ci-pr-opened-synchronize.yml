@@ -1,0 +1,17 @@
+name: PR open/sync
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+    paths:
+      - '**.md'
+
+jobs:
+  set-env-vars:
+  uses: ./.github/workflows/ci.yml
+  with:
+    message: 'PR opened/synchroized'
