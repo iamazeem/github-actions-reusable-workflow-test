@@ -1,4 +1,4 @@
-name: PR open/sync
+name: PR edited
 
 on:
   pull_request:
