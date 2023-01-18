@@ -1,10 +1,12 @@
 name: CI
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
+    inputs:
+      message:
+        type: string
+        description: custom message
+        required: true
 
   workflow_dispatch:
 
@@ -13,4 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo Hello, world!
+        if: ${{ inputs.message }}
+        env:
+          MESSAGE: ${{ inputs.message }}
+        run: |
+          echo "message: $MESSAGE"
