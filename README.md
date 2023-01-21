@@ -6,6 +6,6 @@ Just testing GitHub Actions Reusable Workflows... :)
 
 ```mermaid
 graph TD;
-    ci-pr-openend-synchronize.yml-->ci.yml;
+    ci-pr-opened-synchronize.yml-->ci.yml;
     ci-pr-edited.yml-->ci.yml;
 ```
